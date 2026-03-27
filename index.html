@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro to Git</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .contacts_content{
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            flex-direction: row;
+        }
+        div.contacts{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contacts>button{
+            display: inline;
+        }
+    </style>
 </head>
 <body>
     <h1>Hello world</h1>
+    <div class="contacts">
+        <button onclick="showContacts()">Show Contacts</button>
+        <div class="contacts_content">
+            <a href="https://www.instagram.com/mrc_src.py/">Instagram</a>
+            <a href="https://github.com/mrc-src">Github</a>
+        </div>
+    </div>
+    <script>
+        function showContacts(){
+            const contactsElement = document.querySelectorAll('.contacts_content')[0];
+            contactsElement.style.visibility = 
+                getComputedStyle(contactsElement).visibility==='hidden'?
+                    'initial':'hidden';
+        }
+    </script>
 </body>
 </html>
