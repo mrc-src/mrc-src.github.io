@@ -24,6 +24,17 @@
         .contacts>button{
             display: inline;
         }
+        .flex-centered{
+            display: flex;
+            justify-content: center;
+        }
+        .img-round{
+            border-radius: 100%;
+        }
+        .pfp{
+            aspect-ratio: 1;
+            width: 30%;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +45,9 @@
             <a href="https://www.instagram.com/mrc_src.py/">Instagram</a>
             <a href="https://github.com/mrc-src">Github</a>
         </div>
+    </div>
+    <div class="flex-centered">
+        <img src="https://github.com/mrc-src.png" alt="GitHub pfp" class="img-round pfp"/>
     </div>
     <script>
         function showContacts(){
